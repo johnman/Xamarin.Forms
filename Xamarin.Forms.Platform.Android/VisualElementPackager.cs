@@ -196,7 +196,7 @@ namespace Xamarin.Forms.Platform.Android
 
 				newElement.ChildrenReordered += _childReorderedHandler;
 
-				newChildren = newChildren ?? ElementController.LogicalChildren;
+				newChildren = newChildren ?? ((IElementController)newElement).LogicalChildren;
 
 				for (var i = 0; i < newChildren.Count; i++)
 				{
